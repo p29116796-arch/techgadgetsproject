@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadgets - Оформление заказа</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Анимированный фон -->
+<div class="gradient-dots"></div>
+<div class="waves"></div>
+    <!-- ===== МОБИЛЬНОЕ МЕНЮ (НОВОЕ) ===== -->
+    <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="TechGadgets Логотип" onerror="this.src='https://via.placeholder.com/45x45/2563eb/ffffff?text=TG'">
+                <h1>TechGadgets</h1>
+            </div>
+            <button class="mobile-menu-close">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">🏠 Главная</a></li>
+                <li><a href="catalog.html">📱 Каталог</a></li>
+                <li><a href="cart.html">🛒 Корзина <span class="cart-counter">0</span></a></li>
+                <li><a href="compare.html">📊 Сравнение <span class="compare-counter">0</span></a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <p>&copy; 2025 TechGadgets</p>
+        </div>
+    </div>
+    <!-- ===== КОНЕЦ МОБИЛЬНОГО МЕНЮ ===== -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="TechGadgets Логотип" onerror="this.src='https://via.placeholder.com/45x45/2563eb/ffffff?text=TG'">
+                <h1>TechGadgets</h1>
+            </div>
+            <nav>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина <span class="cart-counter">0</span></a></li>
+        <li><a href="compare.html">Сравнение <span class="compare-counter">0</span></a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+  <main>
+    <div class="container">
+        <div class="order-container">
+            <h2>✅ Оформление заказа</h2>
+            
+            <div class="order-grid">
+                <!-- Форма заказа -->
+                <form class="order-form" id="order-form">
+                    <h3>👤 Данные для доставки</h3>
+                    
+                    <div class="form-group">
+                        <label for="fullname">ФИО *</label>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Иванов Иван Иванович">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="ivanov@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Адрес доставки *</label>
+                        <textarea id="address" name="address" required placeholder="Город, улица, дом, квартира" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Комментарий к заказу</label>
+                        <textarea id="comment" name="comment" placeholder="Дополнительные пожелания..." rows="3"></textarea>
+                    </div>
+
+                    <h3>💳 Способ оплаты</h3>
+                    <div class="form-group">
+                        <div class="payment-methods">
+                            <label>
+                                <input type="radio" name="payment" value="card" checked> 
+                                💳 Банковская карта
+                            </label>
+                            <label>
+                                <input type="radio" name="payment" value="cash"> 
+                                💰 Наличными при получении
+                            </label>
+                            <label>
+                                <input type="radio" name="payment" value="online"> 
+                                🌐 Электронный кошелек
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-order-btn">Подтвердить заказ</button>
+                </form>
+
+                <!-- Боковая панель с информацией о заказе -->
+                <div class="order-summary-sidebar">
+                    <h3>📦 Ваш заказ</h3>
+                    <div id="order-items">
+                        <div class="empty-order">
+                            <p>Нет товаров в заказе</p>
+                            <a href="catalog.html" style="color: var(--primary); text-decoration: none;">Добавить товары</a>
+                        </div>
+                    </div>
+                    <div class="order-total">
+                        <strong>Итого: <span id="order-total-price">0</span> руб.</strong>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(16, 185, 129, 0.1); border-radius: 10px;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--success);">🎁 Преимущества</h4>
+                        <p style="margin: 5px 0; font-size: 0.9rem;">✓ Беслатная доставка</p>
+                        <p style="margin: 5px 0; font-size: 0.9rem;">✓ Гарантия 1 год</p>
+                        <p style="margin: 5px 0; font-size: 0.9rem;">✓ Возврат в течение 30 дней</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TechGadgets. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("📄 Загрузка оформления заказа");
+        if (typeof displayOrderSummary === 'function') {
+            displayOrderSummary();
+        }
+        if (typeof setupOrderForm === 'function') {
+            setupOrderForm();
+        }
+    });
+</script>
+    <!-- Чат-бот -->
+<div class="chatbot-widget">
+    <div class="chatbot-toggle">💬</div>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>Помощник TechGadgets</h4>
+            <button class="chatbot-close">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">
+                Привет! 👋 Я помощник магазина TechGadgets. Чем могу помочь?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Задайте вопрос о товарах...">
+            <button id="sendMessage">Отпр</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+my-shop/
+├── index.html          (главная страница)
+├── catalog.html        (каталог товаров)
+├── cart.html           (корзина)
+├── order.html          (оформление заказа)
+├──compare.html
+├── styles/             (папка для стилей)
+│   └── style.css
+├── scripts/            (папка для JavaScript)
+│   └── script.js
+└── images/             (папка для картинок)
+    ├── logo.png
+    ├── tshirt1.jpg
+    └── mug1.jpg
